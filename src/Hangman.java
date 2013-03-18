@@ -92,7 +92,8 @@ public class Hangman
     {
         while (true)
         {
-            String input = System.console().readLine();
+            Scanner in = new Scanner(System.in);
+            String input = in.next();
             guess = input.charAt(0);
 
             if (!Character.isLetter(guess))
