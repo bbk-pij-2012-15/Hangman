@@ -5,11 +5,11 @@ public class Hangman
 {
     private int badGuesses, totalGuesses;
     private char guess;
-    private List<String> wordList = new ArrayList<String>();
+    private final List<String> wordList = new ArrayList<String>();
     private String gameWord, wordStatus = "", incorrectGuesses = "", guesses = "";
     private char[] correctGuesses, wordStat;
     private final String[] stateArr = new String[7];
-    Random randomGenerator = new Random();
+    private final Random randomGenerator = new Random();
 
     public Hangman()
     {
@@ -117,7 +117,7 @@ public class Hangman
         }
     }
 
-    public String addIncorrectGuess(char letter)
+    public void addIncorrectGuess(char letter)
     {
         if (incorrectGuesses.equals(""))
         {
@@ -128,7 +128,6 @@ public class Hangman
         {
             incorrectGuesses += (" ," + letter);
         }
-        return incorrectGuesses;
     }
 
     public boolean isWrong(char guess)
@@ -170,7 +169,7 @@ public class Hangman
         wordStatus = doubleSpaced(tmp);		// update wordStatus by double-spacing the string
     }
 
-    public static String doubleSpaced(String str)
+    private static String doubleSpaced(String str)
     {
         String dbl_spaced_str = "";
         while (str.length() > 0)
