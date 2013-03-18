@@ -133,9 +133,9 @@ public class Hangman
     public boolean isWrong(char guess)
     {
         boolean wrong = true;
-        for (int i = 0; i < correctGuesses.length; i++)
+        for (char ch : correctGuesses)
         {
-            if (correctGuesses[i] == guess)
+            if (guess == ch)
             {
                 wrong = false;
             }
@@ -146,9 +146,9 @@ public class Hangman
     public boolean complete()
     {
         boolean complete = true;
-        for(int i = 0; i < wordStat.length; i++)
+        for (char ch : wordStat)
         {
-            if('_' == wordStat[i])
+            if ('_' == ch)
             {
                 complete = false;
             }
