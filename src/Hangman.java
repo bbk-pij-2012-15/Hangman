@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Hangman
 {
-    private int badGuesses, totalGuesses, randomInt;
+    private int badGuesses, totalGuesses;
     private char guess;
     private List<String> wordList = new ArrayList<String>();
     private String gameWord, wordStatus = "", incorrectGuesses = "", guesses = "";
@@ -43,7 +43,7 @@ public class Hangman
         }
         in.close();
     /* get a random number and use it to select a random word */
-        randomInt = randomGenerator.nextInt(wordList.size());
+        int randomInt = randomGenerator.nextInt(wordList.size());
         gameWord = wordList.get(randomInt);
         /** @param wordStat an array which holds the letters so far guessed and _ for unknown ones
          *  used to create wordStatus string which is re-displayed each guess */
