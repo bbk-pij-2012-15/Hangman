@@ -92,6 +92,7 @@ public class Hangman
     {
         while (true)
         {
+            System.out.print("Please enter a guess: ");
             Scanner in = new Scanner(System.in);
             String input = in.next();
             guess = input.charAt(0);
