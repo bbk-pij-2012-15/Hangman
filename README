@@ -1,1 +1,3 @@
-Hangman game
+Simple hangman game in java, by Hugh Davey
+
+(game relies on a textfile called 'word.list' being in the same folder when run)
